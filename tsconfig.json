@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "declaration": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": false,
+    "strict": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "useUnknownInCatchVariables": false,
+    "inlineSourceMap": true,
+    "outDir": "dist",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/backend/other"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "xlsx-populate": ["src/types/xlsx-populate"]
+    }
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "lib": ["es2022"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "compilerOptions": {
+      "module": "ESNext",
+      "target": "ESNext"
+    }
+  }
+}

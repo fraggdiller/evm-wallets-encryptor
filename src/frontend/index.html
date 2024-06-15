@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Encryptor and Decryptor</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>EVM WALLETS ENCRYPTOR</h1>
+    <div class="theme-icon">
+        <label for="themeSelect"></label><select id="themeSelect">
+            <option value="system">System</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+    <div class="form-section">
+        <h2>Encrypt Wallets</h2>
+        <form id="encryptForm">
+            <label for="walletFile">Upload wallets.xlsx:</label>
+            <div id="encryptDropArea" class="drop-area">Drag & Drop file here, or click to upload</div>
+            <input type="file" id="walletFile" name="walletFile" style="display: none;" required>
+            <p id="encryptFileName" class="file-name"></p>
+            <button type="button" id="cancelEncryptUpload" class="hidden cancel-button">Cancel Upload</button>
+            <label for="mappingPassword">Enter password for jsonMapping.xlsx:</label>
+            <input type="password" id="mappingPassword" name="mappingPassword" required>
+            <button type="button" id="encryptButton">Encrypt Wallets</button>
+        </form>
+        <p id="encryptResponse" class="response"></p>
+    </div>
+    <div class="form-section">
+        <h2>Decrypt Wallets</h2>
+        <form id="decryptForm">
+            <label for="mappingFile">Upload jsonMapping.xlsx:</label>
+            <div id="decryptDropArea" class="drop-area">Drag & Drop file here, or click to upload</div>
+            <input type="file" id="mappingFile" name="mappingFile" style="display: none;" required>
+            <p id="decryptFileName" class="file-name"></p>
+            <button type="button" id="cancelDecryptUpload" class="hidden cancel-button">Cancel Upload</button>
+            <label for="decryptPassword">Enter password for jsonMapping.xlsx:</label>
+            <input type="password" id="decryptPassword" name="decryptPassword" required>
+            <button type="button" id="decryptButton">Decrypt Wallets</button>
+        </form>
+        <p id="decryptResponse" class="response"></p>
+    </div>
+</div>
+<script src='scripts/script.js'></script>
+</body>
+</html>

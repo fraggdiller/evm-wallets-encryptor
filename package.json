@@ -1,0 +1,27 @@
+{
+  "name": "evm-wallets-encryptor",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "node bootstrap.js ./src/index.ts",
+    "dev": "node bootstrap.js ./src/dev.ts",
+    "postinstall": "node bootstrap.js ./src/postinstall.ts"
+  },
+  "author": "retrodrop.tools",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "exceljs": "^4.4.0",
+    "xlsx-populate": "^1.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2",
+    "eslint": "^8.57.0",
+    "@types/node": "^20.14.2",
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "xlsx-populate-types": "^1.21.1"
+  }
+}
